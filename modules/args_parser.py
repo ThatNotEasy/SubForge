@@ -28,8 +28,11 @@ def parse_arguments():
     parser.add_argument(
         "-e", "--extension",
         required=True,
-        help="Output format extension (required) (srt, vtt, ttml, etc.)",
-        choices=['srt', 'vtt', 'ttml', 'ssa', 'ass', 'sbv', 'txt'],
+        help=(
+            "Output format extension (required) "
+            "(srt, vtt, ttml, dfxp, xml, ssa, ass, sbv, txt)"
+        ),
+        choices=['srt', 'vtt', 'ttml', 'dfxp', 'xml', 'ssa', 'ass', 'sbv', 'txt'],
         metavar="EXT"
     )
     
