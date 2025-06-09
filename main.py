@@ -91,7 +91,9 @@ def handle_vtt(content, source_lang, target_lang, output_ext):
     return converter.convert_to_vtt(blocks, source_lang, target_lang, translator.translate_text)
 
 def handle_ssa(content, source_lang, target_lang, output_ext):
-    return converter.convert_ssa(content, source_lang, target_lang, translator.translate_text)
+    # Use convert_to_ssa to translate SSA/ASS dialogue lines
+    # while preserving the original format
+    return converter.convert_to_ssa(content, source_lang, target_lang, translator.translate_text)
 
 def handle_ttml(content, source_lang, target_lang, output_ext):
     return converter.convert_ttml(content, source_lang, target_lang, translator.translate_text)
